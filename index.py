@@ -1,6 +1,8 @@
-import sys
-import requests
-from flask import Flask
+try:
+    import requests
+    from flask import Flask
+except ImportError:
+    print("Unable to Import Modules")
 
 app = Flask(__name__)
 
