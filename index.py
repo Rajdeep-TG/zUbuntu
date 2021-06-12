@@ -1,10 +1,10 @@
 try:
     import requests
-    from flask import Flask
+    import flask
 except ImportError:
     print("Unable to Import Modules")
 
-app = Flask(__name__)
+app = flask.Flask(__name__)
 
 @app.route('/')
 def index():
