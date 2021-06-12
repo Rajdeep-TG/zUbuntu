@@ -1,10 +1,12 @@
+import sys
+
 try:
     import requests
     import flask
 except ImportError:
     print("Unable to Import Modules")
-
-app = flask.Flask(__name__)
+try:
+    app = flask.Flask(__name__)
 
 @app.route('/')
 def index():
@@ -18,3 +20,7 @@ def routes(path):
 
 if __name__=="__main__":
     app.run()
+except Exception as e:
+    print(sys.version)
+    print("Flask version: " + flask.__version__)
+    print("Exception: " + e)
