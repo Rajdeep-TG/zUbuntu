@@ -1,6 +1,6 @@
-#import sys
+import sys
 
-"""try:
+try:
     import requests
     import flask
 except ImportError:
@@ -24,7 +24,6 @@ except Exception as e:
     print(sys.version)
     print("Flask version: " + flask.__version__)
     print("Exception: " + e)
-"""
 
 import sys
 
